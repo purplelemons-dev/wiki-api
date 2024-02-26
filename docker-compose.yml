@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   web:
+    image: ${AWS_REGISTRY}/wiki-api:latest
     container_name: wiki-api
     build:
       context: src
       dockerfile: Dockerfile
     ports:
       - "80:80"
-
