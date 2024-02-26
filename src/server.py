@@ -19,7 +19,7 @@ def read_root():
     return fastapi.responses.Response(status_code=301, headers={"Location": "/docs"})
 
 
-@app.get("/titles")
+@app.get("/api/titles")
 def read_item(q: str = None):
     url = generate_titles_URL(q)
     response = r.get(url)
@@ -30,7 +30,7 @@ def read_item(q: str = None):
     }
 
 
-@app.get("/page")
+@app.get("/api/page")
 def read_item(pageid: int = None):
     url = generate_page_URL(pageid)
     response = r.get(url)
