@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: wiki-api
+    build:
+      context: src
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
